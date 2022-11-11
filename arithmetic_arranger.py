@@ -47,17 +47,16 @@ def arithmetic_arranger(problems, result=False):
         firstline += f'{firstN(item):>{baseLen}}' + '    '
         # secondline += f'{op:<2}{secN(item):>{baseLen-2}}' + '    '   # baseLen-2            ERROR ON THIS LINE
         secondline += f'{a:<2}{b:>{baseLen-2}}' + '    '   # baseLen-2
-        thirdline += '-'*baseLen + '    '
+        thirdline += '-'*baseLen + '    'cdcd
         fourthline += f'{sumdiff(item):>{baseLen}}' + '    '
 
-    print(firstline)
-    print(secondline)
-    print(thirdline)
-    if result:
-        print(fourthline)
+    firstline += '\n'
+    secondline += '\n'
+    thirdline += '\n'
+    arranged_problems = firstline + secondline + thirdline
 
-    # if result:
-    #     return firstline, secondline, thirdline, fourthline
-    # return firstline, '\n', secondline, '\n', thirdline
+    if result:
+        return arranged_problems + fourthline
+    return arranged_problems
 
 print(arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"], True))
