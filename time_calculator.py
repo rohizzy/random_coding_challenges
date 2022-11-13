@@ -61,6 +61,6 @@ def add_time(t, duration, day=None):
         return f'{hrs}:{mins} {ampm}, {end_day}' + ' BYE'
     return f'{hrs}:{mins} {ampm}' + ' yes'
 
-print(add_time('11:43 PM', '24:20', 'tueSday'), '\n') # Returns: 12:03 AM, Thursday (2 days later)
-print(add_time('11:43 AM', '0:20'),'\n') # Returns: 12:03 PM
-print(add_time('11:30 AM', '2:32', 'Monday'),'\n') # Returns: 2:02 PM, Monday
+print(add_time('11:43 PM', '24:20', 'tueSday'), '\n') # Should return: 12:03 AM, Thursday (2 days later)
+print(add_time('11:43 AM', '0:20'),'\n') # Should return: 12:03 PM
+print(add_time('11:30 AM', '2:32', 'Monday'),'\n') # Should return: 2:02 PM, Monday
